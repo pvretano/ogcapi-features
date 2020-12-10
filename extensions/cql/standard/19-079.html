@@ -2570,13 +2570,6 @@ to the Boolean value <code>FALSE</code>.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>CQL uses Well-Known-Text (WKT) to encode geometry literals. Since WKT does not
-provide a capability to specify the CRS of a geometry literal, the server has
-to determine the CRS of the geometry literals in a filter expression through
-another mechanism. In this specification, the <code>filter-crs</code> query parameter
-is used to pass the CRS information to the server.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2588,6 +2581,23 @@ Add examples
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>CQL uses Well-Known-Text (WKT) to encode geometry literals. Since WKT does not
+provide a capability to specify the CRS of a geometry literal, the server has
+to determine the CRS of the geometry literals in a filter expression through
+another mechanism. In this specification, the <code>filter-crs</code> query parameter
+is used to pass the CRS information to the server.</p>
+</div>
+<div class="paragraph">
+<p>The spatial predicates in CQL provide the capability to filter features based
+on topological relationships. The topological relationships are invariant, no matter
+which metric is used in geometric calculations. However, it is important to understand
+that any computation of the length of a curve or the area of a surface will depend
+on the coordinate system, e.g., whether a "flat" map projection and is used or whether
+the coordinates are on an curved space, typically an ellipsoid or sphere.
+See <a href="#OGC20-070">Features and geometry — Part 2: Metrics</a> for details and the formulas
+to use.</p>
 </div>
 </div>
 <div class="sect2">
@@ -6262,6 +6272,9 @@ Add conformance classes and test cases for all requirements classes and requirem
 </li>
 <li>
 <p><a id="JSONSCHEMAVALIDATION"></a> Internet Engineering Task Force (IETF). draft-handrews-json-schema-validation-02: <strong>JSON Schema Validation: A Vocabulary for Structural Validation of JSON</strong> [online]. Edited by A. Wright, H. Andrews, B. Hutton. 2019 [viewed 2020-11-22]. Available at <a href="https://tools.ietf.org/id/draft-handrews-json-schema-validation-02.txt" class="bare">https://tools.ietf.org/id/draft-handrews-json-schema-validation-02.txt</a></p>
+</li>
+<li>
+<p><a id="OGC20-070"></a> Open Geospatial Consortium (OGC). OGC 20-070: <strong>Features and geometry — Part 2: Metrics</strong> (draft, to be published). Edited by J. Herring. 2020 [viewed 2020-12-06].</p>
 </li>
 <li>
 <p><a id="OpenAPI"></a> OpenAPI Initiative (OAI). <strong>OpenAPI Specification 3.0</strong> [online]. 2020 [viewed 2020-03-16]. The latest patch version at the time of publication of this standard was 3.0.3, available at <a href="http://spec.openapis.org/oas/v3.0.3" class="bare">http://spec.openapis.org/oas/v3.0.3</a></p>

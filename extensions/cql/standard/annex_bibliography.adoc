@@ -9,4 +9,6 @@
 
 * [[JSONSCHEMAVALIDATION]] Internet Engineering Task Force (IETF). draft-handrews-json-schema-validation-02: **JSON Schema Validation: A Vocabulary for Structural Validation of JSON** [online]. Edited by A. Wright, H. Andrews, B. Hutton. 2019 [viewed 2020-11-22]. Available at https://tools.ietf.org/id/draft-handrews-json-schema-validation-02.txt
 
+* [[OGC20-070]] Open Geospatial Consortium (OGC). OGC 20-070: **Features and geometry — Part 2: Metrics** (draft, to be published). Edited by J. Herring. 2020 [viewed 2020-12-06]. 
+
 * [[OpenAPI]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.0** [online]. 2020 [viewed 2020-03-16]. The latest patch version at the time of publication of this standard was 3.0.3, available at http://spec.openapis.org/oas/v3.0.3

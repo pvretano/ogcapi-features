@@ -190,11 +190,22 @@ geometry IS NOT NULL
 
 include::requirements/simple-cql/REQ_spatial-predicates.adoc[]
 
+NOTE: Add examples
+
 CQL uses Well-Known-Text (WKT) to encode geometry literals. Since WKT does not
 provide a capability to specify the CRS of a geometry literal, the server has
 to determine the CRS of the geometry literals in a filter expression through
 another mechanism. In this specification, the `filter-crs` query parameter
 is used to pass the CRS information to the server.
+
+The spatial predicates in CQL provide the capability to filter features based
+on topological relationships. The topological relationships are invariant, no matter 
+which metric is used in geometric calculations. However, it is important to understand
+that any computation of the length of a curve or the area of a surface will depend
+on the coordinate system, e.g., whether a "flat" map projection and is used or whether
+the coordinates are on an curved space, typically an ellipsoid or sphere. 
+See <<OGC20-070,Features and geometry — Part 2: Metrics>> for details and the formulas 
+to use.
 
 [[example_8_8]]
 .Example spatial predicate
